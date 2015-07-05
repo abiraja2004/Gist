@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Gist: Review Summarization</title>
+		<meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1" />
+		<link type="text/css" rel="stylesheet" href="css/framework.css" />
+		<link type="text/css" rel="stylesheet" href="css/gist.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="scripts/gist.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+	</head>
+
+	<body>
+		<div class="content grid">
+			<div class="row" id="title">
+				<h1 class="col-6 text-center">Gist</h1>
+			</div>
+
+			<div class="row" id="searchbar">
+				<form class="row" action="/" method="post" id="search-form">
+					<input type="search" class="col-8" name="search" id="searchbar-text-field" placeholder="Enter a Yelp or Metacritic URL...">
+				</form>
+			</div>
+
+			<div class="row text-center" id="results">
+				{% if exception %}
+					<p class="col-12" id="results-header">Error: <span id="exception">{{exception}}</span></p>
+				{% else %}
+					{% if product_name %}
+						<p class="col-12" id="results-header">Results for <span id="results-title">{{product_name}}</span>:</p>
+					{% endif %}
+					
+					{% if key_points %}
+					<ul class="row" id="results-list">
+					{% for key_point in key_points %}
+						<li class="col-8 key-point">{{key_point}}</li>
+					{% endfor %}
+					</ul>
+					{% endif %}
+				{% endif %}
+			</div>
+		</div>
+	</body>
+</html>

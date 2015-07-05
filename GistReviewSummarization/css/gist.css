@@ -1,0 +1,53 @@
+body {
+	background-color : #FFFFFF;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+.text-center {
+	text-align: center;
+}
+
+#title {
+	font-family: Lato, Helvetica, sans-serif;
+	font-size: 72px;
+	color: black;
+}
+
+#searchbar-text-field {
+	font-family: Georgia, serif;
+	font-size: 20px;
+	border: 1px solid #000000;
+	height: 30px;
+}
+
+#results-title {
+	font-weight: bold;
+}
+
+#results-header {
+	margin-top: 16px;
+	margin-bottom: 0px;
+	font-family: Helvetica, sans-serif;
+	font-size: 24px;
+}
+
+#results-list {
+	-webkit-padding-start: 0px;
+	padding-left: 0px;
+	font-family: Georgia, serif;
+	font-size: 20px;
+	text-align: left;
+}
+
+.key-point {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+#exception {
+	color: red;
+}

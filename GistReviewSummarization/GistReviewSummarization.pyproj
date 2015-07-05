@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>cb3344f6-24d7-4244-b73f-7c1b9ad6d0a0</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>testallfast.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>GistReviewSummarization</Name>
+    <RootNamespace>GistReviewSummarization</RootNamespace>
+    <IsWindowsApplication>False</IsWindowsApplication>
+    <InterpreterId>{9a7a9026-48c1-4688-9d5d-e5699d47d074}</InterpreterId>
+    <InterpreterVersion>2.7</InterpreterVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ajax.py" />
+    <Compile Include="base.py" />
+    <Compile Include="cities.py" />
+    <Compile Include="getrestauranturls.py" />
+    <Compile Include="getreview.py" />
+    <Compile Include="main.py" />
+    <Compile Include="metacriticscraper.py" />
+    <Compile Include="summarization\compare.py" />
+    <Compile Include="summarization\optimal\gahelpers.py" />
+    <Compile Include="summarization\optimal\gaoperators.py" />
+    <Compile Include="summarization\optimal\genalg.py" />
+    <Compile Include="summarization\optimal\gsa.py" />
+    <Compile Include="summarization\optimal\optimize.py" />
+    <Compile Include="summarization\optimal\__init__.py" />
+    <Compile Include="summarization\optimize.py" />
+    <Compile Include="summarization\relevance\corpus.py" />
+    <Compile Include="summarization\relevance\corpusToDict.py" />
+    <Compile Include="summarization\relevance\relevance.py" />
+    <Compile Include="summarization\relevance\__init__.py" />
+    <Compile Include="summarization\summarize.py" />
+    <Compile Include="summarization\__init__.py" />
+    <Compile Include="tasks.py" />
+    <Compile Include="testallfast.py" />
+    <Compile Include="testallslow.py" />
+    <Compile Include="tests\fixtures.py" />
+    <Compile Include="tests\test_integration.py" />
+    <Compile Include="tests\test_optimize.py" />
+    <Compile Include="tests\test_review.py" />
+    <Compile Include="tests\test_summarize.py" />
+    <Compile Include="tests\test_tasks.py" />
+    <Compile Include="userinput.py" />
+    <Compile Include="yelpreviewscraper.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="css\" />
+    <Folder Include="summarization\" />
+    <Folder Include="summarization\optimal\" />
+    <Folder Include="summarization\relevance\" />
+    <Folder Include="tests\" />
+    <Folder Include="static\" />
+    <Folder Include="scripts\" />
+    <Folder Include="templates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="{9a7a9026-48c1-4688-9d5d-e5699d47d074}\2.7" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app.yaml" />
+    <Content Include="css\framework.css" />
+    <Content Include="css\gist.css" />
+    <Content Include="scripts\gist.js" />
+    <Content Include="summarization\relevance\word frequency corpus.csv" />
+    <Content Include="summarization\relevance\word frequency corpus.txt" />
+    <Content Include="templates\gist.html" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+</Project>
