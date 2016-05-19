@@ -4,11 +4,11 @@ Online goods and services sometimes can have hundreds or even thousands of revie
 
 ## How do we find key points?
 Each sentence in every review is a potential key point and is scored on the following attributes using a gaussian function for each attribute
- - Sentiment
+ - Sentiment<br />
     We would like to grab reviews that best match how most customers feel about a product or service. If they feel 'meh' about it then we want to grab parts of reviews that have a 'meh' feeling. 
- - Relevance
+ - Relevance<br />
     How does this statement relate to the product or service? TF-IDF is used to calculate key terms which we most likely would like to include in our summarization. Ex. Rice would be a key term for a sushi restaurant therefore we would rank sentences including the term rice higher than those that don't contain rice. 
- - Sentence Length
+ - Sentence Length<br />
     The length of a sentence can tell us how much information that sentence may contain. "The pasta was bomb" may tell us that the customer was enthusiastic with their meal but it doesn't convey a whole lot compared to "the amount of garlic they use in their pasta sauce creates a perfect balance of flavors." The optimal sentence length which we compare each sentence to is based upon Yelp's elite reviews.   
 
 After each sentence is scored on each attribute the top N sentences are calculated using genetic algorithms. A sentence's fitness is calculated by using a weighted sum of the attribute scores.
